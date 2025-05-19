@@ -2,6 +2,12 @@
 
 A modern web interface for interacting with the kubectl-ai tool, providing a user-friendly way to query your Kubernetes cluster using natural language.
 
+## Demo
+
+![kubectl-ai-web Demo](docs/demo.gif)
+
+*Note: Create a GIF of your application in action and place it in the docs directory. Keep it under 10MB in size for GitHub compatibility.*
+
 ## Features
 
 - 🚀 Modern, responsive web interface
