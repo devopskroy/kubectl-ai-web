@@ -25,7 +25,7 @@ A modern web interface for interacting with the kubectl-ai tool, providing a use
 1. Clone this repository:
 
 ```bash
-git clone https://github.com/yourusername/kubectl-ai-web.git
+git clone https://github.com/devopskroy/kubectl-ai-web.git
 cd kubectl-ai-web
 ```
 
@@ -103,6 +103,10 @@ gunicorn -b 0.0.0.0:8082 app:app
 ## License
 
 This project is licensed under the Apache License 2.0 - see the LICENSE file for details.
+
+## Author
+
+Created by [Kishan Ray](https://github.com/devopskroy)
 
 ## Acknowledgements
 
