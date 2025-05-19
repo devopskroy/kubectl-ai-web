@@ -142,10 +142,12 @@ def available_commands():
     example_commands = [
         "list all pods in the default namespace",
         "show nodes in the cluster",
-        "describe deployment nginx-deployment",
         "what pods are in a CrashLoopBackOff state?",
         "show the logs for pod my-pod",
         "what versions of kubernetes are running on my nodes?",
+        "scale deployment frontend to 3 replicas",
+        "list all deployments with less than desired replicas",
+        "find pods consuming the most CPU"
     ]
     return jsonify({"commands": example_commands})
 
