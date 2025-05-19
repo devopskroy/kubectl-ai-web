@@ -119,14 +119,6 @@ For throttling configuration, you can modify these variables in app.py:
 - `TOKEN_LIMIT_PER_CHUNK`: Approximate tokens per chunk (default: 100)
 - `DELAY_BETWEEN_CHUNKS`: Delay in seconds between chunks (default: 1.0)
 
-## Deployment
-
-For production deployment, you can use Gunicorn:
-
-```bash
-gunicorn -b 0.0.0.0:8082 app:app
-```
-
 ## License
 
 This project is licensed under the Apache License 2.0 - see the LICENSE file for details.
