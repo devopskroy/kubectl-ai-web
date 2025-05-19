@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kubectl-ai Web Interface</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-dark.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Load highlight.js scripts in the head with defer attribute -->
+    <script src="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/lib/core.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/lib/languages/yaml.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/lib/languages/bash.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/lib/languages/json.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fa-solid fa-dharmachakra logo-icon"></i>
+                <h1>kubectl-ai</h1>
+            </div>
+            <div class="controls">
+                <div class="context-selector">
+                    <label for="k8s-context">Cluster:</label>
+                    <div class="select-wrapper">
+                        <select id="k8s-context">
+                            <option value="">Loading contexts...</option>
+                        </select>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                </div>
+                <div class="theme-toggle">
+                    <i class="fa-solid fa-sun"></i>
+                    <label class="switch">
+                        <input type="checkbox" id="theme-switch">
+                        <span class="slider round"></span>
+                    </label>
+                    <i class="fa-solid fa-moon"></i>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="chat-container">
+                <div class="chat-header">
+                    <h2>Conversation</h2>
+                    <button id="reset-conversation" class="reset-btn" title="Reset conversation">
+                        <i class="fa-solid fa-trash-can"></i> Reset
+                    </button>
+                </div>
+                <div class="chat-history" id="chat-history">
+                    <div class="welcome-message">
+                        <h2>Welcome to kubectl-ai Web Interface</h2>
+                        <p>Ask any questions about your Kubernetes cluster using natural language.</p>
+                        <div class="example-queries">
+                            <h3>Try these example queries:</h3>
+                            <ul id="example-queries-list">
+                                <!-- Example queries will be loaded here -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="chat-input-container">
+                    <form id="query-form">
+                        <div class="input-wrapper">
+                            <textarea 
+                                id="query-input" 
+                                placeholder="Ask kubectl-ai about your Kubernetes cluster..."
+                                rows="1"
+                                autofocus
+                            ></textarea>
+                            <button type="submit" id="submit-btn">
+                                <i class="fa-solid fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Powered by <a href="https://github.com/GoogleCloudPlatform/kubectl-ai" target="_blank">kubectl-ai</a> | <span id="k8s-connection-status">Cluster connection: <span class="status">checking...</span></span></p>
+        </footer>
+    </div>
+
+    <!-- Load our custom JS last -->
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html> 
