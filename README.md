@@ -17,6 +17,8 @@ A modern web interface for interacting with the kubectl-ai tool, providing a use
 ## Prerequisites
 
 - Python 3.8 or higher
+  - Run `python3 --version` to check your Python version
+  - If not installed, download from [python.org](https://www.python.org/downloads/) or use your system's package manager
 - kubectl-ai installed and working on your machine
 - Access to a Kubernetes cluster configured with kubectl
 
@@ -32,8 +34,9 @@ cd kubectl-ai-web
 2. Install the required Python dependencies:
 
 ```bash
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 ```
+Note: Use `pip3` instead of `pip` to ensure you're using Python 3 packages.
 
 ## Usage
 
@@ -43,10 +46,17 @@ pip install -r requirements.txt
 export GEMINI_API_KEY=your_api_key_here
 ```
 
+You can generate a free Gemini API key by:
+- Visiting [Google AI Studio](https://aistudio.google.com/apikey)
+- Signing in with your Google account
+- Creating a new API key
+
+This project uses the `gemini-2.5-flash` model by default, as it is available for free through the Google AI Studio and provides excellent performance for Kubernetes operations.
+
 2. Start the web server:
 
 ```bash
-python app.py
+python3 app.py
 ```
 
 Or use the convenience script:
