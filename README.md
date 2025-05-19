@@ -20,6 +20,23 @@ A modern web interface for interacting with the kubectl-ai tool, providing a use
   - Run `python3 --version` to check your Python version
   - If not installed, download from [python.org](https://www.python.org/downloads/) or use your system's package manager
 - kubectl-ai installed and working on your machine
+  - To install kubectl-ai:
+    ```bash
+    # For macOS via Homebrew
+    brew install kubectl-ai
+    
+    # For Linux or manual installation
+    # Download the latest release
+    # Example for v0.0.38 on Linux amd64:
+    curl -LO https://github.com/GoogleCloudPlatform/kubectl-ai/releases/download/v0.0.38/kubectl-ai_0.0.38_linux_amd64.tar.gz
+    tar xzf kubectl-ai_0.0.38_linux_amd64.tar.gz
+    chmod +x kubectl-ai
+    sudo mv kubectl-ai /usr/local/bin/
+    
+    # Verify installation
+    kubectl-ai --help
+    ```
+  - Visit [kubectl-ai GitHub repository](https://github.com/GoogleCloudPlatform/kubectl-ai) for the latest installation instructions
 - Access to a Kubernetes cluster configured with kubectl
 
 ## Installation
