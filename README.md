@@ -6,7 +6,6 @@ A modern web interface for interacting with the kubectl-ai tool, providing a use
 
 ![kubectl-ai-web Demo](docs/demo.gif)
 
-*Note: Create a GIF of your application in action and place it in the docs directory. Keep it under 10MB in size for GitHub compatibility.*
 
 ## Features
 
